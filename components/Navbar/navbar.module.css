@@ -25,6 +25,19 @@
 .menu {
   width: 40%;
 }
+
+.open{
+  display: block;
+}
+
+.close{
+  display: none;
+}
+
+.mobileMenu ul{
+  list-style-type: none;
+}
+
 .logo,
 .logoProducts {
   width: 20%;
