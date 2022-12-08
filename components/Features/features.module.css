@@ -1,6 +1,6 @@
-.features_container{
-    padding-top:200px;
-    display: flex;
+.features_container {
+  padding-top: 200px;
+  display: flex;
 }
 
 .section_title,
@@ -40,22 +40,37 @@
   font-weight: 300;
   font-style: normal;
   font-size: 25px;
-  color:#89B26F;
+  color: #89b26f;
   cursor: pointer;
 }
 
-.btn:hover{
-    background-color: #89B26F;
-    color:#fff;
+.btn:hover {
+  background-color: #89b26f;
+  color: #fff;
 }
 
-.bonsaimg{
-    position: absolute;
-    right: -250px;
-    top: 150px;
+.bonsaimg {
+  position: absolute;
+  right: -250px;
+  top: 150px;
 }
 
 .features_section {
   position: relative;
   padding-bottom: 120px;
+}
+
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 768px) {
+  .bonsaimg {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .bonsaimg {
+    display: none;
+  }
 }

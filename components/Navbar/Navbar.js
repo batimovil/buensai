@@ -10,7 +10,7 @@ const Navbar = ({ page }) => {
   const [open, setOpen] = useState(false);
   const router = useRouter();
 
-  //useeffect where if open is true then add a class to the body to disable scroll
+//useeffect where if open is true then add a class to the body to disable scroll
   useEffect(() => {
     if (open) {
       document.body.style.overflow = 'hidden';
@@ -27,17 +27,17 @@ const Navbar = ({ page }) => {
           onClick={() => {
             setOpen(!open);
           }}
-          className={styles.bars}
+          className={`${styles.bars} ${page.page === 'products' && styles.mobileMenuDark}`}
         />
 
-        <div className={` ${open ? styles.open : styles.close} ${styles.mobileMenu} `}>
+        <div className={`${open ? styles.open : styles.close} ${styles.mobileMenu}`}>
           <ul>
             <li>
               <button
                 onClick={() => {
                   router.push('/cart');
                 }}
-                className={page.page === 'products' ? styles.itemsNavDark : styles.itemsNav}
+                className={styles.itemsNav}
               >
                 Carrito
               </button>
@@ -47,7 +47,7 @@ const Navbar = ({ page }) => {
                 onClick={() => {
                   router.push('/');
                 }}
-                className={page.page === 'products' ? styles.itemsNavDark : styles.itemsNav}
+                className={styles.itemsNav}
               >
                 Inicio
               </button>
@@ -57,7 +57,7 @@ const Navbar = ({ page }) => {
                 onClick={() => {
                   router.push('/aboutus');
                 }}
-                className={page.page === 'products' ? styles.itemsNavDark : styles.itemsNav}
+                className={styles.itemsNav}
               >
                 Nosotros
               </button>
@@ -67,7 +67,7 @@ const Navbar = ({ page }) => {
                 onClick={() => {
                   router.push('/products');
                 }}
-                className={page.page === 'products' ? styles.itemsNavDark : styles.itemsNav}
+                className={styles.itemsNav}
               >
                 Productos
               </button>
@@ -77,7 +77,7 @@ const Navbar = ({ page }) => {
                 onClick={() => {
                   router.push('/contact');
                 }}
-                className={page.page === 'products' ? styles.itemsNavDark : styles.itemsNav}
+                className={styles.itemsNav}
               >
                 Contacto
               </button>
