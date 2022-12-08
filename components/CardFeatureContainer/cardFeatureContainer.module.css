@@ -1,8 +1,23 @@
-.cardsFeatureContainer{
-    position: absolute;
-    top: -145px;
-    left: 0;
-    right: 0;
-    grid-auto-rows: 272px;
-    z-index: 2;
+.cardsFeatureContainer {
+  position: absolute;
+  top: -145px;
+  left: 0;
+  right: 0;
+  grid-auto-rows: 272px;
+  z-index: 2;
+}
+
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 768px) {
+  .cardsFeatureContainer {
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 7px;
+    padding: 0 2em;
   }
+}
+
+@media screen and (max-width: 480px) {
+}
