@@ -22,10 +22,6 @@
 
 @media screen and (max-width: 1200px) {
 
-	.menu{
-	border: 12px solid red;
-}
-
 .col_in_1{ grid-column: span 1; }
 .col_in_2{ grid-column: span 2; }
 .col_in_3{ grid-column: span 3; }
@@ -44,10 +40,6 @@
 }
 
 @media screen and (max-width: 768px) {
-
-	.menu{
-		border: 12px solid green;
-	}
 
 	.grid { grid-column-gap: 0; }
 	
@@ -77,10 +69,6 @@
 }
 
 @media screen and (max-width: 480px) {
-
-	.menu{
-		border: 12px solid blue;
-	}
 
 	.grid > * { grid-column: span 12; }
 	.grid { grid-row-gap: 22px;  }

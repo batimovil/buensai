@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './navbar.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faCartShopping, faBars } from '@fortawesome/free-solid-svg-icons';
@@ -10,6 +10,15 @@ const Navbar = ({ page }) => {
   const [open, setOpen] = useState(false);
   const router = useRouter();
 
+  //useeffect where if open is true then add a class to the body to disable scroll
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [open]);
+
   const mobileMenu = () => {
     return (
       <>
@@ -18,11 +27,21 @@ const Navbar = ({ page }) => {
           onClick={() => {
             setOpen(!open);
           }}
-          style={{ fontSize: 15, color: 'white', height: 15 }}
+          className={styles.bars}
         />
 
         <div className={` ${open ? styles.open : styles.close} ${styles.mobileMenu} `}>
           <ul>
+            <li>
+              <button
+                onClick={() => {
+                  router.push('/cart');
+                }}
+                className={page.page === 'products' ? styles.itemsNavDark : styles.itemsNav}
+              >
+                Carrito
+              </button>
+            </li>
             <li>
               <button
                 onClick={() => {
