@@ -17,11 +17,6 @@
     grid-row-gap: 0;
     padding: 0 2em;
   }
-
-  .cardsFeatureContainer .cardFeature {
-    margin-bottom: 2em;
-  }
-
 }
 
 @media screen and (max-width: 480px) {

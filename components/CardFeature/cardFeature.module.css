@@ -74,3 +74,14 @@
 
 .card p {font-size: 25px; color: #10222B; line-height: 1; margin-bottom: 5px;}
 
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    margin-bottom: .2em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+}
