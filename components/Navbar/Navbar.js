@@ -10,7 +10,7 @@ const Navbar = ({ page }) => {
   const [open, setOpen] = useState(false);
   const router = useRouter();
 
-//useeffect where if open is true then add a class to the body to disable scroll
+  //useeffect where if open is true then add a class to the body to disable scroll
   useEffect(() => {
     if (open) {
       document.body.style.overflow = 'hidden';

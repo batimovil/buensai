@@ -21,6 +21,9 @@
 
   /* Corrects inability to style clickable `input` types in iOS */
   -webkit-appearance: none;
+
+  /*define the standard property 'appearance' for compatibilitycss */
+  appearance: none;
 }
 
 /* Remove excess padding and border in Firefox 4+ */
@@ -39,7 +42,6 @@
   box-shadow: 0px 3px 6px #00000029;
   background-size: cover;
 }
-
 
 .card:nth-of-type(3) .textAndButton {
   text-align: right;
@@ -66,20 +68,28 @@
 }
 
 .card a {
-  color: #95AB63;
+  color: #95ab63;
   font: normal normal 100 15px/15px Europa;
 }
 
-.card a:hover {cursor: pointer; text-decoration: underline;}
+.card a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
 
-.card p {font-size: 25px; color: #10222B; line-height: 1; margin-bottom: 5px;}
+.card p {
+  font-size: 25px;
+  color: #10222b;
+  line-height: 1;
+  margin-bottom: 5px;
+}
 
 @media screen and (max-width: 1200px) {
 }
 
 @media screen and (max-width: 768px) {
   .card {
-    margin-bottom: .2em;
+    margin-bottom: 0.2em;
   }
 }
 
