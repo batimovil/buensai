@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './navbar.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faCartShopping, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faCartShopping, faBars, faClose } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { useRouter } from 'next/router';
 import grid from '../../styles/grid.module.css';
@@ -13,9 +13,9 @@ const Navbar = ({ page }) => {
   //useeffect where if open is true then add a class to the body to disable scroll
   useEffect(() => {
     if (open) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflowY = 'hidden';
     } else {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflowY = 'auto';
     }
   }, [open]);
 
@@ -23,11 +23,11 @@ const Navbar = ({ page }) => {
     return (
       <>
         <FontAwesomeIcon
-          icon={faBars}
+          icon={open ? faClose : faBars}
           onClick={() => {
             setOpen(!open);
           }}
-          className={`${styles.bars} ${page.page === 'products' && styles.mobileMenuDark}`}
+          className={`${styles.bars} ${page.page === 'products' && !open && styles.mobileMenuDark}`}
         />
 
         <div className={`${open ? styles.open : styles.close} ${styles.mobileMenu}`}>
