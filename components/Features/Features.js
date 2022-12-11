@@ -22,10 +22,10 @@ const Features = ({ dataItems }) => {
                 </h2>
 
                 <p className={`${styles['descrip']}`}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et quam et
-                  sapien rutrum mattis at sit amet purus. Fusce sed odio magna. Vestibulum ante
-                  ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec ut
-                  arcu neque.
+                  Los bonsáis pueden ser una fuente de relajación y disfrute, ya que pueden ser un
+                  complemento hermoso y meditativo para cualquier espacio. También pueden ayudar a
+                  purificar el aire de su hogar, ya que muchas variedades de árboles bonsái son
+                  conocidas por su capacidad para eliminar los contaminantes nocivos del aire.
                 </p>
 
                 {dataItems.map((item) => {
