@@ -144,7 +144,7 @@ const Navbar = ({ page }) => {
             className={page.page === 'products' ? styles.itemsNavDark : styles.itemsNav}
           >
             <FontAwesomeIcon icon={faCartShopping} style={{ fontSize: 15, color: 'white' }} />
-            {''} {cartItems}
+            {''} {cartItems > 0 ? cartItems : <span>&nbsp;</span>}
           </button>
         </li>
       </ul>
