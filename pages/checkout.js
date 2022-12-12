@@ -19,14 +19,16 @@ const checkout = () => {
         <link rel="stylesheet" href="https://use.typekit.net/jfy4rte.css"></link>
       </Head>
       <NavBar page={dataPage} />
-      <div className={`inner`} style={{
+      <div
+        className={`inner`}
+        style={{
           display: 'flex',
-          justifyContent: 'space-around'
-        }}>
+          justifyContent: 'space-around',
+        }}
+      >
         <InfoCheckout />
-        <InfoChekoutItem/>
+        <InfoChekoutItem />
       </div>
-      
       <Footer />
     </>
   );

@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import styles from './navbar.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { CartContext } from '../../contexts/CartContext';
 import { faSearch, faCartShopping, faBars, faClose } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { useRouter } from 'next/router';
@@ -9,14 +10,16 @@ import grid from '../../styles/grid.module.css';
 const Navbar = ({ page }) => {
   const [open, setOpen] = useState(false);
   const router = useRouter();
-
-  //useeffect where if open is true then add a class to the body to disable scroll
+  const cart = useContext(CartContext);
+  const [cartItems, setCartItems] = useState(0);
+  //get how many items are in the cart
   useEffect(() => {
-    if (open) {
-      document.body.style.overflowY = 'hidden';
-    } else {
-      document.body.style.overflowY = 'auto';
-    }
+    setCartItems(cart.cart.length);
+  }, [cart]);
+
+  //useeffect where if open is true then change body style to disable scroll
+  useEffect(() => {
+    document.body.style.overflowY = open ? 'hidden' : 'auto';
   }, [open]);
 
   const mobileMenu = () => {
@@ -39,7 +42,7 @@ const Navbar = ({ page }) => {
                 }}
                 className={styles.itemsNav}
               >
-                Carrito
+                Carrito ( {cartItems} )
               </button>
             </li>
             <li>
@@ -141,6 +144,7 @@ const Navbar = ({ page }) => {
             className={page.page === 'products' ? styles.itemsNavDark : styles.itemsNav}
           >
             <FontAwesomeIcon icon={faCartShopping} style={{ fontSize: 15, color: 'white' }} />
+            {''} {cartItems}
           </button>
         </li>
       </ul>

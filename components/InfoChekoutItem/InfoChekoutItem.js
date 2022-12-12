@@ -16,7 +16,7 @@ const InfoChekoutItem = () => {
   const onCloseModal = () => setOpen(false);
   return (
     <div className={styles['container']}>
-      <Modal open={open} onClose={onCloseModal} center >
+      <Modal open={open} onClose={onCloseModal} center>
         <div className={styles['modal']}>
           <h2>Orden recibida!</h2>
           <p>Gracias por tu compra, en breve nos comunicaremos con vos.</p>
