@@ -72,16 +72,6 @@ const Navbar = ({ page }) => {
                 Productos
               </button>
             </li>
-            <li>
-              <button
-                onClick={() => {
-                  router.push('/contact');
-                }}
-                className={styles.itemsNav}
-              >
-                Contacto
-              </button>
-            </li>
           </ul>
         </div>
       </>
@@ -120,16 +110,6 @@ const Navbar = ({ page }) => {
               className={page.page === 'products' ? styles.itemsNavDark : styles.itemsNav}
             >
               Productos
-            </button>
-          </li>
-          <li>
-            <button
-              onClick={() => {
-                router.push('/contact');
-              }}
-              className={page.page === 'products' ? styles.itemsNavDark : styles.itemsNav}
-            >
-              Contacto
             </button>
           </li>
         </ul>
