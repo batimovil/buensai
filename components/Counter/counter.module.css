@@ -1,5 +1,5 @@
 .counter{display:flex;justify-content:center;align-items:center;font-family:Europa;font-weight:lighter}
-.plusminus{color:#bdd684;font-size:0;font-weight:bolder;border:5px solid #bdd684;-moz-border-radius:50%;-webkit-border-radius:50%;border-radius:50%;margin:1em;width:50px;height:50px}
+.plusminus{color:#bdd684;font-size:0;font-weight:bolder;border:5px solid #bdd684;-moz-border-radius:50%;-webkit-border-radius:50%;border-radius:50%;margin:1em;width:40px;height:40px}
 .plusminus:hover{background-color:#bdd684;color:#fff;cursor:pointer}
 .counter p{font-size:1.5em;margin:0 1em; width: 15px;}
 .counter_btn{color:#f6ffe3;background-color:#95ab63;border:2px solid #95ab63;font-size:25px;padding:17px 57px;border-radius:15px;transition:.2s; margin-right: 10px;}
