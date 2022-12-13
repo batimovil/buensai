@@ -7,6 +7,8 @@ import HeroProducts from '../components/HeroProducts/HeroProducts';
 import ProductCard from '../components/ProductCard/ProductCard';
 import Footer from '../components/Footer/Footer';
 import Paginador from '../components/Paginador/Paginador';
+import InfiniteScroll from 'react-infinite-scroller';
+import Loader from '../components/Loader/Loader';
 
 const Products = () => {
   const dataPage = { page: 'products' };
@@ -68,18 +70,25 @@ const Products = () => {
           }}
           className="inner"
         >
-          {!loading &&
-            dataProducts.map((product, index) => {
-              return index < cantToShow ? (
-                <ProductCard
-                  imagen={product.urlImage}
-                  nombre={product.nombre}
-                  precio={product.precio}
-                  key={product.id}
-                  goToProduct={() => goToProduct(product.id)}
-                />
-              ) : null;
-            })}
+          <InfiniteScroll
+            pageStart={cantToShow}
+            loadMore={handleLoadMore}
+            hasMore={cantToShow < dataProducts.length}
+            loader={<Loader key={0}/>}
+          >
+            {!loading &&
+              dataProducts.map((product, index) => {
+                return index < cantToShow ? (
+                  <ProductCard
+                    imagen={product.urlImage}
+                    nombre={product.nombre}
+                    precio={product.precio}
+                    key={product.id}
+                    goToProduct={() => goToProduct(product.id)}
+                  />
+                ) : null;
+              })}
+          </InfiniteScroll>
         </div>
         <Paginador
           handleLoadMore={handleLoadMore}
