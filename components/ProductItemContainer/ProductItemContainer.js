@@ -6,7 +6,7 @@ import grid from '../../styles/grid.module.css';
 
 const ProductItemContainer = (props) => {
   return (
-    <div className='inner'>
+    <div className="inner">
       <div className={`${grid.grid} ${styles.prod_item_container}`}>
         <div className={`${grid.col_6} ${styles.slider_container}`}>
           <SliderProduct image={props.image} />
