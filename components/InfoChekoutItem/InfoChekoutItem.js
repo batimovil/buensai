@@ -47,7 +47,7 @@ const InfoChekoutItem = () => {
         <p>Total con envío</p>
         <p className={styles['total']}>${cart.cartTotalPrice()}</p>
       </div>
-      <button onClick={onOpenModal} className={styles['btn']}>
+      <button onClick={onOpenModal} disabled={!cart.cart.length > 0} className={styles['btn']}>
         Comprar
       </button>
     </div>

@@ -21,6 +21,8 @@
 
   /* Corrects inability to style clickable `input` types in iOS */
   -webkit-appearance: none;
+
+  appearance: none;
 }
 
 /* Remove excess padding and border in Firefox 4+ */
@@ -74,7 +76,7 @@
 }
 
 .cta h2 {
-  font: normal normal 300 60px Europa;
+  font: normal normal 300 60px Europa, Helvetica Neue, sans-serif;
   line-height: 66px;
 }
 
