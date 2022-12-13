@@ -10,7 +10,6 @@ import Paginador from '../components/Paginador/Paginador';
 
 const Products = () => {
   const dataPage = { page: 'products' };
-  //const { cart, setCart } = useContext(CartContext);
   const [dataProducts, setDataProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const router = useRouter();
