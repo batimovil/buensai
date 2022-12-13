@@ -61,20 +61,20 @@ const Products = () => {
           background: '#F9F4EF',
         }}
       >
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-around',
-            flexWrap: 'wrap',
-            margin: '50px auto',
-          }}
-          className="inner"
+        <InfiniteScroll
+          pageStart={cantToShow}
+          loadMore={handleLoadMore}
+          hasMore={cantToShow < dataProducts.length}
+          loader={<Loader key={0} />}
         >
-          <InfiniteScroll
-            pageStart={cantToShow}
-            loadMore={handleLoadMore}
-            hasMore={cantToShow < dataProducts.length}
-            loader={<Loader key={0} />}
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'space-around',
+              flexWrap: 'wrap',
+              margin: '50px auto',
+            }}
+            className="inner"
           >
             {!loading &&
               dataProducts.map((product, index) => {
@@ -88,8 +88,8 @@ const Products = () => {
                   />
                 ) : null;
               })}
-          </InfiniteScroll>
-        </div>
+          </div>
+        </InfiniteScroll>
         <Paginador
           handleLoadMore={handleLoadMore}
           cantToShow={cantToShow}
