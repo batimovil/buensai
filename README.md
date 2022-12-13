@@ -1,3 +1,33 @@
+
+# 🌳 BUENSAI
+
+
+In a context of global stress and lack of green spaces, we consider showing a product that meets these needs.
+This project is about a website that sells bonsai trees. It uses the next js and react js frameworks.
+
+## Acknowledgements
+
+ - [Dall E from Open AI](https://openai.com/dall-e-2/)
+ - [React-infinite-scroller by danbovey](https://github.com/danbovey/react-infinite-scroller)
+## Co Author
+
+- [@batimovil](https://www.github.com/batimovil)
+
+
+## Badges
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
+
+
+## Tech Stack
+
+**Client:** React, Next
+
+**Server:** Vercel
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
