@@ -4,7 +4,6 @@ import { CartContext } from '../../contexts/CartContext';
 import { useContext } from 'react';
 import { useRouter } from 'next/router';
 
-
 const CartContainer = () => {
   const cart = useContext(CartContext);
   const router = useRouter();

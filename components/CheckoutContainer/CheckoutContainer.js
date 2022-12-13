@@ -1,7 +1,7 @@
 import React from 'react';
 import InfoCheckout from '../InfoCheckout/InfoCheckout';
 import InfoChekoutItem from '../InfoChekoutItem/InfoChekoutItem';
-import styles from './checkoutContainer.module.css';
+import styles from './CheckoutContainer.module.css';
 
 const CheckoutContainer = () => {
   return (
