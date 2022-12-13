@@ -74,7 +74,7 @@ const Products = () => {
             pageStart={cantToShow}
             loadMore={handleLoadMore}
             hasMore={cantToShow < dataProducts.length}
-            loader={<Loader key={0}/>}
+            loader={<Loader key={0} />}
           >
             {!loading &&
               dataProducts.map((product, index) => {
