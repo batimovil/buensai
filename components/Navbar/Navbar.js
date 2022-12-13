@@ -118,7 +118,13 @@ const Navbar = ({ page }) => {
         </ul>
       </nav>
       <div className={page.page === 'products' ? styles.logoProducts : styles.logo}>
-        <a>BUENSAI</a>
+        <a
+          onClick={() => {
+            router.push('/');
+          }}
+        >
+          BUENSAI
+        </a>
       </div>
       <ul className={styles.social}>
         <li>

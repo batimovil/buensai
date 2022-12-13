@@ -27,7 +27,6 @@ const Products = () => {
         const db = getFirestore();
         const itemsCollection = db.collection(`productos`);
         const itemSnapshot = await itemsCollection.get();
-
         const items = itemSnapshot.docs.map((doc) => {
           return { id: doc.id, ...doc.data() };
         });

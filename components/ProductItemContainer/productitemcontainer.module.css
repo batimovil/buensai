@@ -1,27 +1,22 @@
 .prod_item_container {
   height: fit-content;
+  margin-bottom: 6em;
 }
 .slider_container {
   display: flex;
   align-items: center;
 }
 
-@media screen and (max-width: 1200px) {
-  .prod_item_container {
-    margin-bottom: 1em;
-  }
-}
-
 @media screen and (max-width: 768px) {
   .prod_item_container {
-    margin-bottom: 1em;
+    margin-bottom: 3em;
     padding: 1em;
   }
 }
 
 @media screen and (max-width: 480px) {
   .prod_item_container {
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     padding: 1em;
   }
 }

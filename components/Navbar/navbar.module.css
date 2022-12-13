@@ -94,6 +94,7 @@
 
 .logoProducts a {
   color: #10222b !important;
+  cursor: pointer;
 }
 
 .social {
